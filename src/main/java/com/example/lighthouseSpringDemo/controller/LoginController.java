@@ -18,7 +18,7 @@ public class LoginController {
 
 	@Autowired
 	private UserInfoRepository userInfoRepository;
-	
+
 	@GetMapping("/login")
 	public String getLoginView() {
 
@@ -32,8 +32,8 @@ public class LoginController {
 		mv.addObject("username", username);
 
 		UserInfo userInfo = userInfoRepository.findByName(username);
-		
-		if (username.equals(userInfo.getName()) && password.equals(userInfo.getPassword())) {
+
+		if (userInfo != null && password.equals(userInfo.getPassword())) {
 			mv.setViewName("success");
 		} else {
 			mv.setViewName("fail");
