@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+<title>Login</title>
+</head>
+<body>
+	<h1 align="center">User Login</h1>
+	<div>
+		<form action="/login" method="post">
+			<table align="center">
+				<tr>
+					<td><label for="username">User Name</label></td>
+					<td><input type="text" name="username"></input></td>
+				</tr>
+				<tr>
+					<td><label for="password">Password</label></td>
+					<td><input type="password" name="password"></input></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Login"></input></td>
+				</tr>
+			</table>
+		</form>
+		<br>
+		<p align="center">
+			Have no account yet? 
+			<a href="/register">
+				<button>Register</button>
+			</a>
+		</p>
+	</div>
+</body>
+</html>
