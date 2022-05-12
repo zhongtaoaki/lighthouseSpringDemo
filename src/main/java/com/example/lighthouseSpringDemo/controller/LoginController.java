@@ -29,7 +29,6 @@ public class LoginController {
 		} else {
 			mv.setViewName("fail");
 		}
-
 		return mv;
 	}
 
