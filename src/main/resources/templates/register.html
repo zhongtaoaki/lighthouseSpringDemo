@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+<title>Register</title>
+
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+	<h1 align="center">User Register</h1>
+	<div>
+		<form action="/register" method="post">
+			<table align="center">
+				<tr>
+					<td><label for="username">User Name</label></td>
+					<td><input type="text" name="username"></input></td>
+				</tr>
+				<tr>
+					<td><label for="password">Password</label></td>
+					<td><input type="password" name="password"></input></td>
+				</tr>
+				<tr>
+					<td><label for="password_again">Password Again</label></td>
+					<td><input type="password" name="password_again"></input></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Register"></input></td>
+				</tr>
+			</table>
+		</form>
+		<br>
+		<p align="center">
+			Already have an account? 
+			<a href="/login">
+				<button>Login</button>
+			</a>
+		</p>
+	</div>
+</body>
+</html>
