@@ -32,6 +32,7 @@ public class LoginController {
 		mv.addObject("username", username);
 
 		UserInfo userInfo = userInfoRepository.findByName(username);
+		log.info("userInfo: {}",userInfo);
 
 		if (userInfo != null && password.equals(userInfo.getPassword())) {
 			mv.setViewName("success");
